@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="ticket_container">
+        <div class="ticket_form_head">
+          <h2 class="ticket_form_heading">Next Gala Event</h2>
+          <span class="ticket_form_time_heading">Select Events Days</span>
+          <div class="ticket_form_checkboxes">
+            <div class="ticket_form_checkbox">
+              <input type="checkbox" id="checkbox1" />
+              <label for="checkbox1">Saturday | Feb 17,2025 12pm - 10pm</label>
+            </div>
+            <div class="ticket_form_checkbox">
+              <input type="checkbox" id="checkbox2" />
+              <label for="checkbox2">Sunday | Feb 18,2025 12pm - 10pm</label>
+            </div>
+          </div>
+        </div>
+        <div class="ticket_form_body">
+          <h2>Register Now</h2>
+          <div class="ticket_counter">
+            <div class="ticket_count">
+              <h3 class="ticket_count_number">10</h3>
+              <p class="ticket_count_type">days</p>
+            </div>
+            <div class="ticket_count">
+              <h3 class="ticket_count_number">06</h3>
+              <p class="ticket_count_type">Hours</p>
+            </div>
+            <div class="ticket_count">
+              <h3 class="ticket_count_number">35</h3>
+              <p class="ticket_count_type">Mins</p>
+            </div>
+            <div class="ticket_count">
+              <h3 class="ticket_count_number">42</h3>
+              <p class="ticket_count_type">Sec</p>
+            </div>
+          </div>
+          <div class="ticket_form">
+            <div class="ticket_form_row">
+              <div class="ticket_form_group">
+                <img src="./images/user.svg" alt="" />
+                <input type="text" placeholder="Name" />
+              </div>
+              <div class="ticket_form_group">
+                <img src="./images/phone.svg" alt="" />
+                <input type="tel" placeholder="Phone Number" />
+              </div>
+            </div>
+            <div class="ticket_form_row">
+              <div class="ticket_form_group">
+                <img src="./images/email.svg" alt="" />
+                <input type="email" placeholder="Email" />
+              </div>
+            </div>
+            <div class="ticket_form_row">
+              <div class="ticket_form_group">
+                <img src="./images/users.svg" alt="Users" />
+                <select>
+                  <option value="">No of Persons</option>
+                  <option value="1">1 Person</option>
+                  <option value="2">2 Persons</option>
+                  <option value="3">3 Persons</option>
+                  <option value="4">4 Persons</option>
+                  <option value="5">5 Persons</option>
+                  <option value="more">More than 5</option>
+                </select>
+              </div>
+              <div class="ticket_form_group">
+                <img src="./images/code.svg" alt="" />
+                <input type="text" placeholder="Postal Code" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ticket_form_footer">
+          <button type="submit" class="ticket_submit_button">
+            Buy Tickets
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
