@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -10,6 +11,7 @@ body {
   height: 100dvh;
   width: 100%;
   display: flex;
+  padding: 20px;
 }
 
 :root {
@@ -20,7 +22,7 @@ body {
 .container {
   width: 100%;
   max-width: 1280px;
-  padding-inline: 20px;
+  margin-inline: auto;
 }
 
 .ticket_container {
@@ -28,6 +30,7 @@ body {
   overflow: hidden;
   position: relative;
 }
+
 .ticket_container:before,
 .ticket_container:after {
   content: '';
@@ -64,14 +67,20 @@ body {
   font-weight: 600;
 }
 
-.ticket_form_time_heading {
-  font-size: 14px;
-  color: #ffffff;
-  opacity: 0.8;
+.checkboxs_wrapper {
+
   padding-top: 20px;
   border-top: 1px solid #96394e;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.ticket_form_time_heading {
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 0.8;
+  margin-bottom: 20px;
+  display: block;
 }
 
 .ticket_form_checkboxes {
@@ -158,15 +167,10 @@ body {
   flex-direction: column;
 }
 
-.ticket_count:not(:last-child):after {
-  content: '';
-  top: 50%;
-  left: calc((100%) + (100% / 1));
+.ratio-icon {
   width: 9.7px;
   height: 28.19px;
-  position: absolute;
   background-size: contain;
-  transform: translateY(-50%);
   background-repeat: no-repeat;
   background-image: url('./images/ratio-icon.svg');
 }
@@ -196,11 +200,13 @@ body {
 
 .ticket_form_row {
   display: flex;
-  align-items: center;
   grid-gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .ticket_form_group {
+  min-width: 200px;
   padding: 0 10px;
   height: 47px;
   display: flex;
@@ -252,4 +258,149 @@ body {
   text-transform: uppercase;
   writing-mode: tb;
   rotate: 180deg;
+}
+
+@media (max-width: 1024px) {
+  .ticket_form_heading {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .ticket_form_time_heading {
+    font-size: 12px;
+  }
+
+  .ticket_form_checkbox label {
+    font-size: 14px;
+  }
+
+  .ticket_form_body h2 {
+    font-size: 18px;
+  }
+
+  .ticket_count_number {
+    font-size: 45px;
+    line-height: 60px;
+  }
+
+  .ticket_count_type {
+    font-size: 16px;
+  }
+
+  .ticket_submit_button {
+    font-size: 20px;
+  }
+
+  .ticket_form_group input::placeholder {
+    font-size: 14px;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  .ticket_form_head {
+    padding: 30px 40px 30px 50px;
+  }
+
+  .ticket_form_body {
+    padding: 20px 60px 20px 40px;
+  }
+
+  .ticket_form_footer {
+    padding: 0 40px 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .ticket_container {
+    flex-direction: column;
+  }
+
+  .ticket_form_head,
+  .ticket_form_body,
+  .ticket_form_footer {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .ticket_form_footer {
+    padding: 20px;
+  }
+
+  .ticket_submit_button {
+    rotate: none;
+    writing-mode: unset;
+  }
+
+  .ticket_form_head {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ticket_container:before,
+  .ticket_container:after {
+    content: none;
+  }
+
+  .checkboxs_wrapper {
+    border-top: unset;
+    padding-top: 0;
+    margin: 0;
+    flex: 0 0 auto;
+  }
+
+  .ticket_form_checkbox label {
+    max-width: unset;
+  }
+}
+
+@media (max-width: 550px) {
+  .ticket_form_heading {
+    font-size: 24px;
+    line-height: 30px;
+    max-width: 150px;
+  }
+
+  .ticket_form_checkbox label {
+    font-size: 12px;
+  }
+
+  .ticket_form_body h2 {
+    font-size: 16px;
+  }
+
+  .ticket_count_number {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .ticket_count_type {
+    font-size: 14px;
+  }
+
+  .ticket_submit_button {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 468px){
+  .ticket_form_head {flex-direction: column;align-items: center;text-align: center;grid-gap: 20px;}
+
+.ticket_form_heading {
+    max-width: unset;
+}
+
+.ticket_count_number {
+    font-size: 30px;
+}
+
+.ticket_form_footer {
+    padding: 10px;
+}
+.ratio-icon{
+  width: 6px;
+  height: 20px;
+}
 }
