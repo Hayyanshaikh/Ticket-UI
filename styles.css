@@ -35,7 +35,7 @@ body {
   top: 0;
   height: 100%;
   width: 51.9px;
-  background-image: url('../images/ticket_circle.svg');
+  background-image: url('./images/ticket_circle.svg');
   background-repeat: no-repeat;
   background-position: left;
 }
@@ -168,7 +168,7 @@ body {
   background-size: contain;
   transform: translateY(-50%);
   background-repeat: no-repeat;
-  background-image: url('../images/ratio-icon.svg');
+  background-image: url('./images/ratio-icon.svg');
 }
 
 .ticket_count_number {
