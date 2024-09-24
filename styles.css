@@ -90,6 +90,7 @@ body {
 }
 
 .ticket_form_checkbox {
+  cursor: pointer;
   display: flex;
   align-items: center;
   grid-gap: 10px;
@@ -118,7 +119,8 @@ body {
   background-image: url('data:image/svg+xml,<svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9.57973" cy="10.1852" r="9.20668" fill="white"/><circle cx="9.57973" cy="10.1852" r="8.70668" stroke="white" stroke-opacity="0.1"/><path d="M13.4532 8.05288C13.3775 8.33521 13.195 8.53834 12.9953 8.73803C11.7558 9.97061 10.5198 11.2101 9.28033 12.4461C8.83275 12.8937 8.32663 12.8937 7.87905 12.4495C7.30063 11.8746 6.7291 11.2961 6.15068 10.7246C5.95099 10.5284 5.77196 10.3287 5.70654 10.0498C5.70654 9.95684 5.70654 9.86732 5.70654 9.77436C5.7754 9.6332 5.82016 9.47138 5.91312 9.35088C6.24364 8.93084 6.83928 8.89985 7.23177 9.27513C7.60361 9.6332 7.96512 10.005 8.33008 10.3666C8.53665 10.5731 8.61584 10.5731 8.82586 10.3631C9.84498 9.34399 10.8607 8.32488 11.8798 7.3092C12.3033 6.88916 12.9161 6.90982 13.2604 7.36085C13.3499 7.47791 13.3912 7.63628 13.4532 7.774C13.4532 7.87041 13.4532 7.95992 13.4532 8.05288Z" fill="%23B52F4C"/></svg>');
 }
 
-.ticket_form_checkbox label {
+.ticket_form_checkbox p {
+  user-select: none;
   font-size: 16px;
   color: #fff;
   line-height: 24px;
@@ -229,6 +231,10 @@ body {
   margin-top: 2px;
 }
 
+.ticket_form_group select option {
+  color: black;
+}
+
 .ticket_form_group input::placeholder {
   color: #ffffff;
   font-size: 16px;
@@ -243,15 +249,15 @@ body {
 .ticket_form_footer {
   background: #d5712a;
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   padding: 0 50px 0 37px;
+  border: none;
+  outline: none;
 }
 
 .ticket_submit_button {
-  background: transparent;
-  border: none;
-  outline: none;
   font-size: 24px;
   line-height: 36px;
   color: #ffffff;
@@ -385,22 +391,28 @@ body {
   }
 }
 
-@media (max-width: 468px){
-  .ticket_form_head {flex-direction: column;align-items: center;text-align: center;grid-gap: 20px;}
+@media (max-width: 468px) {
+  .ticket_form_head {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-gap: 20px;
+  }
 
-.ticket_form_heading {
+  .ticket_form_heading {
     max-width: unset;
-}
+  }
 
-.ticket_count_number {
+  .ticket_count_number {
     font-size: 30px;
-}
+  }
 
-.ticket_form_footer {
+  .ticket_form_footer {
     padding: 10px;
-}
-.ratio-icon{
-  width: 6px;
-  height: 20px;
-}
+  }
+
+  .ratio-icon {
+    width: 6px;
+    height: 20px;
+  }
 }
