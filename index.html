@@ -1,100 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <form class="ticket_container">
-        <div class="ticket_form_head">
-          <h2 class="ticket_form_heading">Next Gala Event</h2>
-          <div class="checkboxs_wrapper">
-            <span class="ticket_form_time_heading">Select Events Days</span>
-            <div class="ticket_form_checkboxes">
-              <label  for="checkbox1" class="ticket_form_checkbox">
-                <input type="checkbox" id="checkbox1" />
-                <p>Saturday | Feb 17,2025 12pm - 10pm</p>
-              </label>
-              <label  for="checkbox2" class="ticket_form_checkbox">
-                <input type="checkbox" id="checkbox2" />
-                <p>Sunday | Feb 18,2025 12pm - 10pm</p>
-              </label>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="ticket-heading">Tickets UI</h1>
+    <form class="ticket_container">
+      <div class="ticket_form_head">
+        <h2 class="ticket_form_heading">Next Gala Event</h2>
+        <div class="checkboxs_wrapper">
+          <span class="ticket_form_time_heading">Select Events Days</span>
+          <div class="ticket_form_checkboxes">
+            <label for="checkbox1" class="ticket_form_checkbox">
+              <input type="checkbox" id="checkbox1" />
+              <p>Saturday | Feb 17,2025 12pm - 10pm</p>
+            </label>
+            <label for="checkbox2" class="ticket_form_checkbox">
+              <input type="checkbox" id="checkbox2" />
+              <p>Sunday | Feb 18,2025 12pm - 10pm</p>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="ticket_form_body">
+        <h2>Register Now</h2>
+        <div class="ticket_counter">
+          <div class="ticket_count">
+            <h3 class="ticket_count_number" id="days">00</h3>
+            <p class="ticket_count_type">Days</p>
+          </div>
+          <span class="ratio-icon"></span>
+          <div class="ticket_count">
+            <h3 class="ticket_count_number" id="hours">00</h3>
+            <p class="ticket_count_type">Hours</p>
+          </div>
+          <span class="ratio-icon"></span>
+          <div class="ticket_count">
+            <h3 class="ticket_count_number" id="minutes">00</h3>
+            <p class="ticket_count_type">Mins</p>
+          </div>
+          <span class="ratio-icon"></span>
+          <div class="ticket_count">
+            <h3 class="ticket_count_number" id="seconds">00</h3>
+            <p class="ticket_count_type">Sec</p>
+          </div>
+        </div>
+        <div class="ticket_form">
+          <div class="ticket_form_row">
+            <div class="ticket_form_group">
+              <img src="./images/user.svg" alt="" />
+              <input type="text" placeholder="Name" />
+            </div>
+            <div class="ticket_form_group">
+              <img src="./images/phone.svg" alt="" />
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+          </div>
+          <div class="ticket_form_row">
+            <div class="ticket_form_group">
+              <img src="./images/email.svg" alt="" />
+              <input type="email" placeholder="Email" />
+            </div>
+          </div>
+          <div class="ticket_form_row">
+            <div class="ticket_form_group">
+              <img src="./images/users.svg" alt="Users" />
+              <select>
+                <option value="">No of Persons</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 Persons</option>
+                <option value="3">3 Persons</option>
+                <option value="4">4 Persons</option>
+                <option value="5">5 Persons</option>
+                <option value="more">More than 5</option>
+              </select>
+            </div>
+            <div class="ticket_form_group">
+              <img src="./images/code.svg" alt="" />
+              <input type="text" placeholder="Postal Code" />
             </div>
           </div>
         </div>
-        <div class="ticket_form_body">
-          <h2>Register Now</h2>
-          <div class="ticket_counter">
-            <div class="ticket_count">
-              <h3 class="ticket_count_number" id="days">00</h3>
-              <p class="ticket_count_type">Days</p>
-            </div>
-            <span class="ratio-icon"></span>
-            <div class="ticket_count">
-              <h3 class="ticket_count_number" id="hours">00</h3>
-              <p class="ticket_count_type">Hours</p>
-            </div>
-            <span class="ratio-icon"></span>
-            <div class="ticket_count">
-              <h3 class="ticket_count_number" id="minutes">00</h3>
-              <p class="ticket_count_type">Mins</p>
-            </div>
-            <span class="ratio-icon"></span>
-            <div class="ticket_count">
-              <h3 class="ticket_count_number" id="seconds">00</h3>
-              <p class="ticket_count_type">Sec</p>
+      </div>
+      <button type="submit" class="ticket_form_footer">
+        <div class="ticket_submit_button">
+          Buy Tickets
+        </div>
+      </button>
+    </form>
+    <br/>
+    <form class="ticket_container">
+      <button type="submit" class="ticket_form_footer entryticket_form_footer">
+        <div class="ticket_submit_button">Entry Ticket</div>
+      </button>
+      <div class="ticket_form_body">
+        <div class="entry-ticket-headings">
+          <h2>Entry Tickets</h2>
+          <div class="gta-festival-heading">
+            <h2>2025 GTA Ramadan Festival</h2>
+          </div>
+          <div class="gta-admission-heading">
+            <h2>General Admission</h2>
+          </div>
+        </div>
+        <div class="ticket_form">
+          <div class="ticket_form_row">
+            <div class="ticket_form_group">
+              <input readonly type="text" placeholder="SABZ Haute Couture, 50 Karachi Drive, #Unit # 63, Markham, ON L3S 0B6, Canada" />
             </div>
           </div>
-          <div class="ticket_form">
-            <div class="ticket_form_row">
-              <div class="ticket_form_group">
-                <img src="./images/user.svg" alt="" />
-                <input type="text" placeholder="Name" />
-              </div>
-              <div class="ticket_form_group">
-                <img src="./images/phone.svg" alt="" />
-                <input type="tel" placeholder="Phone Number" />
-              </div>
+          <div class="ticket_form_row">
+            <div class="ticket_form_group">
+              <input readonly type="text" placeholder="Saturday, September 14, 2025 from 12:00 PM to 7:00 PM" />
             </div>
-            <div class="ticket_form_row">
-              <div class="ticket_form_group">
-                <img src="./images/email.svg" alt="" />
-                <input type="email" placeholder="Email" />
-              </div>
-            </div>
-            <div class="ticket_form_row">
-              <div class="ticket_form_group">
-                <img src="./images/users.svg" alt="Users" />
-                <select>
-                  <option value="">No of Persons</option>
-                  <option value="1">1 Person</option>
-                  <option value="2">2 Persons</option>
-                  <option value="3">3 Persons</option>
-                  <option value="4">4 Persons</option>
-                  <option value="5">5 Persons</option>
-                  <option value="more">More than 5</option>
-                </select>
-              </div>
-              <div class="ticket_form_group">
-                <img src="./images/code.svg" alt="" />
-                <input type="text" placeholder="Postal Code" />
-              </div>
+            <div class="ticket_form_group">
+              <input readonly type="text" placeholder="No of Persons: 02" />
             </div>
           </div>
         </div>
-        <button type="submit"  class="ticket_form_footer">
-          <div class="ticket_submit_button">
-            Buy Tickets
-        </button>
+        <div class="entry_ticket_order_info">
+          <div class="entry_ticket_order_nos">
+            <div class="order_heading">
+              <h4>Order Information</h4>
+            </div>
+            <div class="order_no">
+              <h5>Order # 10389052199</h5>
+            </div>
+            <div class="order_time">
+              <h5>Order by: Muhammad Maaz | Sep 10, 24 1:38 AM</h5>
+            </div>
+          </div>
+          <div class="entry_ticket_logo">
+            <img src="images/gta-white-logo.svg" alt="" />
+          </div>
         </div>
-      </form>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="./counter.js"></script>
-    <script src="./script.js"></script>
-  </body>
+      </div>
+      <div class="ticket_form_head entryticket_form_head">
+        <div class="qr_code">
+          <img src="images/qrcode-image.svg" alt="" />
+          <p>Show the QR code at the counter</p>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="./counter.js"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>

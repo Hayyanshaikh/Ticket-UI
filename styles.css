@@ -8,7 +8,7 @@
 }
 
 body {
-  height: 100dvh;
+  min-height: 100dvh;
   width: 100%;
   display: flex;
   padding: 20px;
@@ -23,6 +23,14 @@ body {
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
+}
+
+.ticket-heading{
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: clamp(30px,3vw,48px);
 }
 
 .ticket_container {
@@ -56,6 +64,31 @@ body {
   flex-direction: column;
   background: #8c263c;
   padding: 42px 50px 42px 60px;
+}
+
+.entryticket_form_head{
+  position: relative;
+  border-left: 2px dashed #fff;
+  padding: 42px 60px 42px  50px;
+}
+
+.entryticket_form_head:after,
+.entryticket_form_head:before{
+  bottom: 0;
+  content: '';
+  --ratio: 30px;
+  aspect-ratio: 1;
+  position: absolute;
+  width: var(--ratio);
+  background-color: #fff;
+  left: calc((var(--ratio) / -2) - 0.5px);
+  clip-path: polygon(50% 20%, 0 100%, 100% 100%);
+}
+
+.entryticket_form_head:before{
+  top: 0;
+  bottom: auto;
+  rotate: -180deg;
 }
 
 .ticket_form_heading {
@@ -146,7 +179,7 @@ body {
   font-weight: 600;
 }
 
-.ticket_form_body h2:after {
+.ticket_form_body > h2:after {
   content: '';
   height: 1px;
   flex: 1;
@@ -208,11 +241,11 @@ body {
 }
 
 .ticket_form_group {
-  min-width: 200px;
-  padding: 0 10px;
   height: 47px;
   display: flex;
   grid-gap: 10px;
+  padding: 0 15px;
+  min-width: 200px;
   border-radius: 6px;
   align-items: center;
   background: #00000026;
@@ -257,6 +290,10 @@ body {
   outline: none;
 }
 
+.entryticket_form_footer{
+  padding: 0 37px 0 50px;
+}
+
 .ticket_submit_button {
   font-size: 24px;
   line-height: 36px;
@@ -264,6 +301,64 @@ body {
   text-transform: uppercase;
   writing-mode: tb;
   rotate: 180deg;
+}
+
+.gta-festival-heading h2 {
+  font-size: 34px;
+  line-height: 41.45px;
+}
+.gta-admission-heading h2 {
+  line-height: 21.94px;
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: var(--montserrat-font-family);
+  font-weight: 500;
+}
+
+.order_heading h4 {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 21.94px;
+  font-family: var(--montserrat-font-family);
+}
+
+.order_no h5, .order_time h5 {
+  font-size: 14px;
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 5px;
+}
+
+.entry_ticket_order_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  gap: 20px 2%;
+}
+.qr_code {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.qr_code p {
+  font-size: 14px;
+  color: #FFFFFF;
+  max-width: 200px;
+  font-weight: 400;
+  line-height: 18px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.qr_code img{
+  height: 150px;
+  width: 150px;
 }
 
 @media (max-width: 1024px) {
